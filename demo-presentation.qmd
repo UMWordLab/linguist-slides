@@ -15,11 +15,14 @@ This is a Quarto relealjs-based presentation using the tikz engine to compile La
 
 You can do the same with other Rmd (R markdown) based slide and html outputs (bookdown, etc.). 
 
-The source for this file is in [the repo here](https://github.com/UMWordLab/linguist-slides): 
+The source for this file is in [the repo here](https://github.com/UMWordLab/linguist-slides).
+
+You should see some slide viewing options in the corner. 
 
 ## Tree
 
-(@tree1)
+(@tree1) this is a numbered example (via Pandoc example lists)
+
 ```{tikz tikz-ex, fig.cap = "this is a caption", fig.ext = 'png', engine.opts = list(template = "tikz2png.tex")}
 
 \begin{tikzpicture}
