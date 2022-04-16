@@ -1,0 +1,51 @@
+---
+title: "Quarto (Revealjs) Presentation with Trees"
+format: 
+  revealjs:
+    theme: simple
+    code-fold: true
+editor: visual
+engine: knitr
+---
+
+## Quarto
+
+
+This is a Quarto relealjs-based presentation using the tikz engine to compile LaTeX to png and place the png on a slide. 
+
+You can do the same with other Rmd (R markdown) based slide and html outputs (bookdown, etc.). 
+
+## Tree
+
+(@tree1)
+```{tikz tikz-ex, fig.cap = "this is a caption", fig.ext = 'png', engine.opts = list(template = "tikz2png.tex")}
+
+\begin{tikzpicture}
+\Tree [.S [.NP this ] [.VP [.V is ] [.NP {a tree} ] ] ]
+\label{fig:tree1}
+\end{tikzpicture}
+
+```
+
+## Tree with Code
+
+chunk options used:
+```{verbatim, echo = TRUE}
+{tikz tikz-ex2, fig.cap = "this is a caption", fig.ext = 'png', engine.opts = list(template = "tikz2png.tex"), echo = TRUE}
+# tikz2png.tex template is required (in project directory) to load special LaTeX packages like tikzqtree
+```
+
+
+```{tikz tikz-ex2, fig.cap = "this is a caption", fig.ext = 'png', engine.opts = list(template = "tikz2png.tex"), echo = TRUE}
+
+\begin{tikzpicture}
+\Tree [.S [.NP this ] [.VP [.V is ] [.NP {another tree} ] ] ]
+\label{fig:tree2}
+\end{tikzpicture}
+
+```
+
+
+## Referring back
+
+As we saw in the tree in (@tree1), blah blah. 
