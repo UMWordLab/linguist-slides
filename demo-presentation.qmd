@@ -8,12 +8,14 @@ editor: visual
 engine: knitr
 ---
 
-## Quarto
+## Quarto Slides
 
 
 This is a Quarto relealjs-based presentation using the tikz engine to compile LaTeX to png and place the png on a slide. 
 
 You can do the same with other Rmd (R markdown) based slide and html outputs (bookdown, etc.). 
+
+The source for this file is in [the repo here](https://github.com/UMWordLab/linguist-slides): 
 
 ## Tree
 
