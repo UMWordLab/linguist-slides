@@ -50,7 +50,52 @@ chunk options used:
 
 ```
 
-
 ## Referring back
 
 As we saw in the tree in (@tree1), blah blah. 
+
+## gb4e
+
+There's a great lingglosses package for R but it doesn't seem to automatically work with this Quarto setup. You can just throw some gb4e in through LaTeX and it will render as an image, but the example numbers are not linked to others (pandoc) in the document:
+
+```{tikz, tikz-gb4e, fig.cap = "optional caption", fig.ext = 'png', engine.opts = list(template = "tikz2png.tex")}
+\begin{exe}
+\ex
+\gll Wenn jemand in die W\"uste zieht ... \\
+If someone in the desert draws and lives ... \\
+\trans ‘if one retreats to the desert and ... ’
+\end{exe}
+
+```
+
+## math (i.e., semantics)
+
+Inline math can be indicated with dollar signs, like so:  $[\![cat]\!]$ (using `$[\![cat]\!]$`). Or in a block:
+
+$$
+\lambda x.\lambda y.love(x,y)\\
+[\lambda x[\lambda y[love(x,y)]]]\\
+\forall x[ \exists y[love(x,y)]]
+$$ 
+
+## Venn Diagrams
+
+```{tikz, venn2, fig.cap = "Venn Diagram Caption", fig.ext = 'png', engine.opts = list(template = "tikz2png.tex"), echo = TRUE}
+\begin{venndiagram3sets}[labelOnlyAB={$A \cap B$},
+                         labelOnlyAC={$A \cap C$},
+                         labelOnlyBC={$B \cap C$},
+                         labelABC={$A \cap B \cap C$},
+                         radius=3cm,
+                         overlap=2.5cm]
+\end{venndiagram3sets}
+```
+
+
+## Truth Tables in Markdown
+
+| p | q | p $\land$ q |
+|---|---|---------|
+| T | T | T       |
+| T | F | F       |
+| F | T | F       |
+| F | F | F       |

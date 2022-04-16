@@ -423,6 +423,70 @@
 <section id="referring-back" class="slide level2">
 <h2>Referring back</h2>
 <p>As we saw in the tree in (1), blah blah.</p>
+</section>
+<section id="gb4e" class="slide level2">
+<h2>gb4e</h2>
+<p>There’s a great lingglosses package for R but it doesn’t seem to automatically work with this Quarto setup. You can just throw some gb4e in through LaTeX and it will render as an image, but the example numbers are not linked to others (pandoc) in the document:</p>
+
+<img data-src="demo-presentation_files/figure-revealjs/tikz-gb4e-1.png" width="960" class="r-stretch quarto-figure-center"><p class="caption">optional caption</p></section>
+<section id="math-i.e.-semantics" class="slide level2">
+<h2>math (i.e., semantics)</h2>
+<p>Inline math can be indicated with dollar signs, like so: <span class="math inline">\([\![cat]\!]\)</span> (using <code>$[\![cat]\!]$</code>). Or in a block:</p>
+<p><span class="math display">\[
+\lambda x.\lambda y.love(x,y)\\
+[\lambda x[\lambda y[love(x,y)]]]\\
+\forall x[ \exists y[love(x,y)]]
+\]</span></p>
+</section>
+<section id="venn-diagrams" class="slide level2">
+<h2>Venn Diagrams</h2>
+<div class="cell" data-engine.opts="{&quot;template&quot;:&quot;tikz2png.tex&quot;}">
+<details>
+<summary>Code</summary>
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource tikz cell-code number-lines code-with-copy"><code class="sourceCode latex"><span id="cb3-1"><a href="#cb3-1"></a><span class="kw">\begin</span>{<span class="ex">venndiagram</span><span class="er">3sets</span>}[labelOnlyAB={<span class="ss">$A </span><span class="sc">\cap</span><span class="ss"> B$</span>},</span>
+<span id="cb3-2"><a href="#cb3-2"></a>                         labelOnlyAC={<span class="ss">$A </span><span class="sc">\cap</span><span class="ss"> C$</span>},</span>
+<span id="cb3-3"><a href="#cb3-3"></a>                         labelOnlyBC={<span class="ss">$B </span><span class="sc">\cap</span><span class="ss"> C$</span>},</span>
+<span id="cb3-4"><a href="#cb3-4"></a>                         labelABC={<span class="ss">$A </span><span class="sc">\cap</span><span class="ss"> B </span><span class="sc">\cap</span><span class="ss"> C$</span>},</span>
+<span id="cb3-5"><a href="#cb3-5"></a>                         radius=3cm,</span>
+<span id="cb3-6"><a href="#cb3-6"></a>                         overlap=2.5cm]</span>
+<span id="cb3-7"><a href="#cb3-7"></a><span class="kw">\end</span>{<span class="ex">venndiagram</span><span class="er">3sets</span>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
+
+</div>
+<img data-src="demo-presentation_files/figure-revealjs/venn2-1.png" width="960" class="r-stretch quarto-figure-center"><p class="caption">Venn Diagram Caption</p></section>
+<section id="truth-tables-in-markdown" class="slide level2">
+<h2>Truth Tables in Markdown</h2>
+<table>
+<thead>
+<tr class="header">
+<th>p</th>
+<th>q</th>
+<th>p <span class="math inline">\(\land\)</span> q</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>T</td>
+<td>T</td>
+<td>T</td>
+</tr>
+<tr class="even">
+<td>T</td>
+<td>F</td>
+<td>F</td>
+</tr>
+<tr class="odd">
+<td>F</td>
+<td>T</td>
+<td>F</td>
+</tr>
+<tr class="even">
+<td>F</td>
+<td>F</td>
+<td>F</td>
+</tr>
+</tbody>
+</table>
 <div class="footer footer-default">
 
 </div>
