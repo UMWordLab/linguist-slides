@@ -1,6 +1,6 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/wordlabuser/public_html/
+    - export DEPLOYPATH=/home/wordlabuser/public_html/linguist-slides/
     - /bin/cp -R * $DEPLOYPATH
     
